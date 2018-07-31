@@ -13,10 +13,22 @@
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * Math.floor(max - min)) + min;
 }
-
+var c=1;
 var randomInt = getRandomInt(1, 100);
 /* END STARTING CODE */
-
+var usernum=parseInt(prompt("Guess a number from 1 to 100:"));
+while(usernum!=randomInt){
+	if(usernum<randomInt){
+		alert("you guessed too low<br>");
+		c++;
+	}
+	else if(usernum>randomInt){
+		alert("you guessed too high<br>");
+		c++;
+	}
+	var usernum=parseInt(prompt("Guess a number from 1 to 100:"));
+}
+alert("Correct!! :D. <br>you guessed in "+c+" tries.");
 // your code goes under here
 
     </script>
