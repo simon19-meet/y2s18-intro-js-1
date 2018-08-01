@@ -19,6 +19,24 @@
 	var numArray = [2,70,15,30,360];
 	numArray.sort(sortNumber);
 	alert(numArray.join(","));
+
+	var TicArray=[0,0,0,0,0,0,0,0,0];
+	function CountEmpty(){
+		var c=[];
+		for(var i=0;i<TicArray.length;i++){
+			if(TicArray[i]==0)
+				c.push(i+1);
+		}
+		return c;
+	}
+	var p=prompt("Enter the index of tic-tac-toe cell from 1 to 9. Those cells are free: "+CountEmpty());
+	while(p>9&&p<1){
+		alert("The cell is invalid. Try again");
+		p=prompt("Enter the index of tic-tac-toe cell from 1 to 9. Those cells are free: "+CountEmpty());
+	}
+	for(var i=0;i<TicArray.length;i++){
+		
+	}
     </script>
 </body>
 
