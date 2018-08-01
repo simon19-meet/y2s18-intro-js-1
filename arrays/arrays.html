@@ -13,7 +13,12 @@
 		a=a.split(", ");
 		a.sort();
 		document.write(a);
-
+	function sortNumber(a,b) {
+    return a - b;
+}
+	var numArray = [2,70,15,30,360];
+	numArray.sort(sortNumber);
+	alert(numArray.join(","));
     </script>
 </body>
 
