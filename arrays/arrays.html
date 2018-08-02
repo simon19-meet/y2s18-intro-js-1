@@ -30,12 +30,18 @@
 		return c;
 	}
 	var p=prompt("Enter the index of tic-tac-toe cell from 1 to 9. Those cells are free: "+CountEmpty());
-	while(p>9&&p<1){
+	while(p>9&&p<1||TicArray[p-1]==1){
 		alert("The cell is invalid. Try again");
 		p=prompt("Enter the index of tic-tac-toe cell from 1 to 9. Those cells are free: "+CountEmpty());
 	}
+	TicArray[p-1]=1;
+
 	for(var i=0;i<TicArray.length;i++){
-		
+		if(TicArray[i]==TicArray[i+3]&&TicArray[i+6]==TicArray[i]||
+			TicArray[i]==TicArray[i+4]&&TicArray[i+8]==TicArray[i]||
+			TicArray[i]==TicArray[i+1]&&TicArray[i+2]==TicArray[i]){
+
+		}
 	}
     </script>
 </body>
